@@ -1,0 +1,56 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local LoginFrame = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local password = Instance.new("TextBox")
+local login = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+
+LoginFrame.Name = "LoginFrame"
+LoginFrame.Parent = ScreenGui
+LoginFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LoginFrame.Position = UDim2.new(0.0948212966, 0, 0.360736191, 0)
+LoginFrame.Size = UDim2.new(0, 429, 0, 194)
+
+TextLabel.Parent = LoginFrame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.Position = UDim2.new(-0.000749796629, 0, -0.00249969959, 0)
+TextLabel.Size = UDim2.new(0, 429, 0, 50)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Login Page"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextSize = 40.000
+
+password.Name = "password"
+password.Parent = LoginFrame
+password.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+password.Position = UDim2.new(0.266550362, 0, 0.328315735, 0)
+password.Size = UDim2.new(0, 200, 0, 50)
+password.Font = Enum.Font.SourceSans
+password.Text = "Password..."
+password.TextColor3 = Color3.fromRGB(0, 0, 0)
+password.TextSize = 14.000
+
+login.Name = "login"
+login.Parent = LoginFrame
+login.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+login.Position = UDim2.new(0.264219373, 0, 0.682739854, 0)
+login.Size = UDim2.new(0, 200, 0, 50)
+login.Font = Enum.Font.SourceSans
+login.Text = "Log Into Account"
+login.TextColor3 = Color3.fromRGB(0, 0, 0)
+login.TextSize = 14.000
+login.MouseButton1Down:connect(function()
+	if password.Text == “Huey” then
+		LoginFrame.Visible = false
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/scriptmakerl1/premium/main/script"))()
+    
+	end
+end)
